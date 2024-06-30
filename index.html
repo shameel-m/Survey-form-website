@@ -3,11 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 id="title">freeCodeCamp Survey Form</h1>
     <p id="description"><i> Thank you for taking the time to help us improve the platform</i></p>
-    <form id="survey-form"></form>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+        <label id="name-label" for="first-name">Name <br> <input placeholder="Enter your Name" id="name" name="name" type="text" required /></label><br>
+        <label  id="email-label" for="email">Email<br> <input placeholder="Enter your Email" id="email" name="email" type="email" required /></label><br>
+        <label  id="number-label" for="age">Age(optional)<br> <input id="number" placeholder="Age" name="age" type="number" min="13" max="120" required /></label><br>
+        </fieldset>
+        <fieldset>
+        <label for="role">Which option best describes your current role? <br>
+            <select id="dropdown">
+                <option value="">Select current role</option>
+                <option value="1">Student</option>
+                <option value="2">Full TIme Job</option>
+                <option value="3">Full TIme Learner</option>
+                <option value="4">Prefer not to say</option>
+                <option value="5">Other</option>
+            </select>
+        </fieldset>
+        <fieldset>
+        </label><br>
+        <label id="dropdown">Would you recommend freeCodeCamp to a friend?<br>
+            <input value="a" name="recommend" type="radio"> Definetely<br>
+            <input value="b" name="recommend" type="radio"> May be<br>
+            <input  value="c" name="recommend" type="radio"> Not sure<br>
+        </label>
+        </fieldset>
+        <fieldset>
+        <label for="role">What is your favorite feature of freeCodeCamp? <br>
+            <select id="role">
+                <option value="">Select an option</option>
+                <option value="a">Challenges</option>
+                <option value="b">Projects</option>
+                <option value="c">Community</option>
+                <option value="d">Open source</option>
+            </select>
+        </label><br>
+        </fieldset>
+        <fieldset>
+        <label for="improve">What would you like to see improved? (Check all that apply) <br>
+            <input value="00"  type="checkbox"> Front-end Projects<br>
+            <input value="01" type="checkbox"> Back-end Projects <br>
+            <input  value="02" type="checkbox"> Data Visualization<br>
+            <input value="03" type="checkbox"> Challenges<br>
+            <input value="04" type="checkbox"> Open Source Community<br>
+            <input value="05" type="checkbox"> Gitter help rooms<br>
+            <input value="06" type="checkbox"> Videos<br>
+            <input value="07"type="checkbox"> City Meetups<br>
+            <input value="08" type="checkbox"> Wiki<br>
+            <input value="09" type="checkbox"> Forum<br>
+            <input value="10" type="checkbox"> Additional Courses<br>
+        </label>
+            </fieldset>
+        <fieldset>
+        <label for="suggestions">Any Comments or suggestions <br>
+        <textarea name="suggestions" id="suggestions"></textarea> </label> <br>
+        </fieldset>
+        </label>
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
 </body>
 </html>
